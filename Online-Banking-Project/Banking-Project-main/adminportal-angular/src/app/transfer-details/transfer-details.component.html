@@ -1,0 +1,66 @@
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+</head>
+<body>
+  <section class="ftco-section">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+      id="ftco-navbar"
+    >
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item active">
+              <a routerLink="/home" class="nav-link">Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END nav -->
+  </section>
+</body>
+
+<table class="table table-striped" style="overflow-x: auto">
+  <thead>
+    <tr style="text-align: center">
+      <th>Id</th>
+      <th>Sender Account</th>
+      <th>Reciver Account</th>
+      <th>Transfer Amount</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transaction of TransferData">
+      <td style="text-align: center">{{ transaction.id }}</td>
+      <td style="text-align: center">{{ transaction.saccount }}</td>
+      <td style="text-align: center">{{ transaction.raccount }}</td>
+      <td style="text-align: center">{{ transaction.amount }}</td>
+      <td style="text-align: center">{{ transaction.date }}</td>
+    </tr>
+  </tbody>
+</table>
+<footer
+  class="text-center text-lg-start"
+  style="position: fixed; bottom: 0; width: 100%"
+>
+  <div class="text-center p-3 text-dark">
+    © 2022 Copyright, Developed By: Group 5
+  </div>
+</footer>
